@@ -1,0 +1,23 @@
+#map{
+    height: 700px;
+    width: 700px;
+    position: relative;
+}
+
+.popup{
+    width: 100%;
+    text-align: center;
+}
+
+.here{
+    z-index: 100;
+}
+
+.op{
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    background-color:white;
+    z-index: 1000;
+    border: solid 3px #000000;
+}

@@ -29,14 +29,18 @@ var greenIcon = new LeafIcon({iconUrl: 'leaf-green.png'}),
 function init(){
     const local = localStorage.getItem('memos');
     const memosJson = JSON.parse(local);
-    console.log(memosJson);
-
-    for (let index = 0; index < memosJson.length; index++) {
-        console.log(memosJson[index])
-        memos.push(memosJson[index])
+    
+    if (memosJson == null){
+        
+    }else{
+        for (let index = 0; index < memosJson.length; index++) {
+            console.log(memosJson[index])
+            memos.push(memosJson[index])
+        }
+        console.log(memos)
+        putmuker()
     }
-    console.log(memos)
-    putmuker()
+    
 }init()
 
 map.on('click',function(e){

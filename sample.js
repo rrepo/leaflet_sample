@@ -66,8 +66,9 @@ function putmuker(){
     }
 }
 
-function remove () {
+function remove() {
     for (let index = 0; index < marker_list.length; index++) {
+        console.log(marker_list[index])
         map.removeLayer(marker_list[index]);
     }
 }
@@ -85,3 +86,15 @@ map.on('popupopen', function(e) {
     document.getElementById(result[0].id - 1).value = memos[result[0].id - 1].memo
 });
 
+document.getElementById("delete").onclick = function() {
+    remove()
+    memos.length = 0;
+    localStorage.setItem('memos',null);
+};
+
+
+L.easyButton('fas fa-comment-alt', function(){
+    remove()
+    memos.length = 0;
+    localStorage.setItem('memos',null);
+}).addTo(map);

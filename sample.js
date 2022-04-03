@@ -92,3 +92,9 @@ document.getElementById("delete").onclick = function(e) {
     localStorage.setItem('memos',null);
     e.stopPropagation();
 };
+
+// L.easyButton('fas fa-comment-alt', function(){
+//     remove()
+//     memos.length = 0;
+//     localStorage.setItem('memos',null);
+// }).addTo(map);

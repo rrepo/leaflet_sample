@@ -15,15 +15,7 @@
 
 .op{
     position: absolute;
-    top: 140px;
+    top: 90px;
     left: 10px;
-    background-color:white;
     z-index: 1000;
-    border: solid 3px #000000;
 }
-/* .delete{
-    position: absolute;
-    z-index: 1000;
-    top: 100px;
-    left: 10px;
-} */

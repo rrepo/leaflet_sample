@@ -86,15 +86,9 @@ map.on('popupopen', function(e) {
     document.getElementById(result[0].id - 1).value = memos[result[0].id - 1].memo
 });
 
-document.getElementById("delete").onclick = function() {
+document.getElementById("delete").onclick = function(e) {
     remove()
     memos.length = 0;
     localStorage.setItem('memos',null);
+    e.stopPropagation();
 };
-
-
-L.easyButton('fas fa-comment-alt', function(){
-    remove()
-    memos.length = 0;
-    localStorage.setItem('memos',null);
-}).addTo(map);
